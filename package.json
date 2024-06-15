@@ -9,14 +9,32 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@headlessui/react": "^2.0.4",
+    "@heroicons/react": "^1.0.6",
+    "@mdx-js/loader": "^3.0.1",
+    "@mdx-js/react": "^3.0.1",
+    "@mui/icons-material": "^5.15.19",
+    "@mui/material": "^5.15.19",
+    "@next/mdx": "^14.2.4",
+    "@prisma/client": "^5.15.0",
+    "@types/mdx": "^2.0.13",
+    "next": "14.2.3",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.2.3"
+    "react-markdown": "^9.0.1",
+    "remark-gfm": "^4.0.0",
+    "swiper": "^11.1.4",
+    "swr": "^2.2.5",
+    "unfetch": "^5.0.0"
   },
   "devDependencies": {
-    "postcss": "^8",
-    "tailwindcss": "^3.4.1",
+    "daisyui": "^4.12.2",
     "eslint": "^8",
-    "eslint-config-next": "14.2.3"
+    "eslint-config-next": "14.2.3",
+    "postcss": "^8",
+    "prisma": "^5.15.0",
+    "tailwindcss": "^3.4.1"
   }
 }

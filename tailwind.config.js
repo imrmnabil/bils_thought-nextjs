@@ -10,9 +10,18 @@ module.exports = {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      },
+    },
+    container: {
+      padding: {
+        DEFAULT: '1rem',
+        sm: '2.5rem',
+        lg: '5rem',
+        xl: '6rem',
+        '2xl': '7rem',
       },
     },
   },
-  plugins: [],
+  plugins: [require('daisyui')],
 };
