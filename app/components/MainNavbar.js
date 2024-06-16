@@ -7,7 +7,7 @@ import { useState, useEffect } from "react";
 const urbanist = Urbanist({ subsets: ["latin"] });
 
 export default function MainNavbar() {
-  const [visible, setVisible] = useState(false);
+  const [visible, setVisible] = useState(true);
 
   useEffect(() => {
     const handleMouseMove = (e) => {
@@ -34,85 +34,89 @@ export default function MainNavbar() {
           : "transform transition-transform -translate-y-full"
       }
     >
-      <div className="bg-white navbar">
-        <div className="navbar-start">
-          <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="w-5 h-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
+      <div className="flex justify-center bg-white ">
+        <div className="navbar !container">
+          <div className="navbar-start">
+            <div className="dropdown">
+              <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-5 h-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />
+                </svg>
+              </div>
+              <ul
+                tabIndex={0}
+                className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h8m-8 6h16"
-                />
-              </svg>
+                <li>
+                  <a>HOME</a>
+                </li>
+                <li>
+                  <a>BLOGS</a>
+                  <ul className="p-2">
+                    <li>
+                      <a>Submenu 1</a>
+                    </li>
+                    <li>
+                      <a>Submenu 2</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a>ABOUT ME</a>
+                </li>
+              </ul>
             </div>
-            <ul
-              tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            <Link
+              href="/"
+              className="text-2xl font-bold sm:text-4xl btn btn-ghost"
             >
+              <h1 className={urbanist.className}>Bil&#39;s Thought</h1>
+            </Link>
+          </div>
+          <div className="hidden navbar-center lg:flex">
+            <ul className="px-1 text-xl menu menu-horizontal">
               <li>
-                <a>HOME</a>
+                <Link href="/">HOME</Link>
               </li>
               <li>
-                <a>BLOGS</a>
-                <ul className="p-2">
-                  <li>
-                    <a>Submenu 1</a>
-                  </li>
-                  <li>
-                    <a>Submenu 2</a>
-                  </li>
-                </ul>
+                <details>
+                  <summary>BLOGS</summary>
+                  <ul className="p-2">
+                    <li>
+                      <a>Submenu 1</a>
+                    </li>
+                    <li>
+                      <a>Submenu 2</a>
+                    </li>
+                  </ul>
+                </details>
               </li>
               <li>
                 <a>ABOUT ME</a>
               </li>
             </ul>
           </div>
-          <Link
-            href="/"
-            className="text-2xl font-bold sm:text-4xl btn btn-ghost"
-          >
-            <h1 className={urbanist.className}>Bil&#39;s Thought</h1>
-          </Link>
-        </div>
-        <div className="hidden navbar-center lg:flex">
-          <ul className="px-1 text-xl menu menu-horizontal">
-            <li>
-              <Link href="/">HOME</Link>
-            </li>
-            <li>
-              <details>
-                <summary>BLOGS</summary>
-                <ul className="p-2">
-                  <li>
-                    <a>Submenu 1</a>
-                  </li>
-                  <li>
-                    <a>Submenu 2</a>
-                  </li>
-                </ul>
-              </details>
-            </li>
-            <li>
-              <a>ABOUT ME</a>
-            </li>
-          </ul>
-        </div>
-        <div className="navbar-end">
-          <a className="px-1 text-white bg-black btn btn-sm sm:btn-md">
-            Follow
-          </a>
+          <div className="navbar-end">
+            <a className="px-1 text-white bg-black btn btn-sm sm:btn-md">
+              Follow
+            </a>
+          </div>
         </div>
       </div>
-      <hr className="" />
+      <div className="flex justify-center w-full">
+        <hr className="container" />
+      </div>
     </div>
   );
 }

@@ -1,16 +1,18 @@
-import React from 'react'
-import ConvertedArticle from './article'
-import fetchSingleBlog from '@/app/lib/fetchSingleBlog'
+import fs from 'fs';
+import path from 'path';
+import matter from 'gray-matter';
+import LoadMarkdown from './LoadMarkdown';
 
-export default async function Article({params }) {
+export default function Blog({params}) {
   const {id} = params
-  const idInt = parseInt(id)
-  const post  = await fetchSingleBlog(idInt);
-  console.log(post)
+  const filePath = path.join(process.cwd(), 'public', 'md', `post${id}.md`);
+  const fileContents = fs.readFileSync(filePath, 'utf8');
+  const conv = matter(fileContents);
 
   return (
     <div>
-      <ConvertedArticle src = {post.content}/>
+      <LoadMarkdown src={conv.content}/>
     </div>
-  )
+  );
 }
+

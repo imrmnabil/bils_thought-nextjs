@@ -31,7 +31,7 @@ export default function RootLayout({ children }) {
       <body className={roboto.className}>
         <header>
         <div className="flex justify-center">
-          <div className="container fixed z-50">
+          <div className="fixed z-50 w-full">
             <ResponsiveAppBar />
           </div>
           </div>
