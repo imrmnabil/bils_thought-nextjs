@@ -63,14 +63,14 @@ export default function MainNavbar() {
                 </li>
                 <li>
                   <a>BLOGS</a>
-                  <ul className="p-2">
+                  {/* <ul className="p-2">
                     <li>
                       <a>Submenu 1</a>
                     </li>
                     <li>
                       <a>Submenu 2</a>
                     </li>
-                  </ul>
+                  </ul> */}
                 </li>
                 <li>
                   <a>ABOUT ME</a>
@@ -90,7 +90,7 @@ export default function MainNavbar() {
                 <Link href="/">HOME</Link>
               </li>
               <li>
-                <details>
+                {/* <details>
                   <summary>BLOGS</summary>
                   <ul className="p-2">
                     <li>
@@ -100,7 +100,8 @@ export default function MainNavbar() {
                       <a>Submenu 2</a>
                     </li>
                   </ul>
-                </details>
+                </details> */}
+                <Link href="/">BLOGS</Link>
               </li>
               <li>
                 <a>ABOUT ME</a>

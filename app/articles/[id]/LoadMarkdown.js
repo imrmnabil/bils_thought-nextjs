@@ -4,14 +4,14 @@ import useMDXComponents from "@/app/mdx-components";
 export default function LoadMarkdown({ src }) {
   const renderer = {
     h1: ({ children }) => (
-      <h1 className="text-2xl font-extrabold">{children}</h1>
+      <h1 className="text-3xl font-extrabold">{children}</h1>
     ),
-    h2: ({ children }) => <h2 className="text-xl font-bold">{children}</h2>,
-    h3: ({ children }) => <h3 className="text-lg font-semibold">{children}</h3>,
-    h4: ({ children }) => <h4 className="text-base font-medium">{children}</h4>,
-    h5: ({ children }) => <h5 className="text-sm font-normal">{children}</h5>,
+    h2: ({ children }) => <h2 className="text-2xl font-bold">{children}</h2>,
+    h3: ({ children }) => <h3 className="text-xl font-semibold">{children}</h3>,
+    h4: ({ children }) => <h4 className="text-lg font-medium">{children}</h4>,
+    h5: ({ children }) => <h5 className="font-normal text-md">{children}</h5>,
     h6: ({ children }) => <h6 className="text-xs font-light">{children}</h6>,
-    p: ({ children }) => <p className="text-base">{children}</p>,
+    p: ({ children }) => <p className="text-xl">{children}</p>,
     a: ({ href, children }) => (
       <a href={href} className="text-blue-500 hover:underline">
         {children}

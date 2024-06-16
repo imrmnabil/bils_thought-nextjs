@@ -19,13 +19,18 @@ export default async function fetchSingleBlog(id) {
       userid: blog.userid,
     },
   });
+  let user = await prisma.user.findFirst({
+    where: {
+      id: blog.userid,
+    },
+  });
   let catagory = blog.categories[0];
   let { date, month, year, hour, minute } = formatDateTime(blog.createdAt);
   let post = {
     id: blog.id,
     title: blog.title,
     description:blog.description,
-    author: author.name,
+    author: user.name,
     authorAvatar: author.avatar,
     image: blog.cover,
     badge: {
