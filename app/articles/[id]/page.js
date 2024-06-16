@@ -14,7 +14,7 @@ export default async function Blog({params}) {
   const {id} = params
   const post = await fetchSingleBlog(parseInt(id))
   console.log(post)
-  const filePath = path.join(process.cwd(), 'public', `${post.mdpath}`);
+  const filePath = path.join(process.cwd(), 'public','md', `${post.mdpath}`);
   const fileContents = fs.readFileSync(filePath, 'utf8');
   const conv = matter(fileContents);
   const {month, day, year} = post.date;
