@@ -9,7 +9,7 @@ export default function PostCard({post}) {
 
     return (
       <Link href={`/articles/${id}`}>
-      <div className="h-full max-w-sm overflow-hidden transition bg-white shadow-2xl shadow-gray-200 rounded-xl md:max-w-md lg:max-w-lg hover:-translate-x-1 hover:-translate-y-1">
+      <div className="h-full max-w-sm overflow-hidden transition bg-white shadow-2xl lg:min-w-60 xl:min-w-80 shadow-gray-200 rounded-xl md:max-w-md lg:max-w-lg hover:-translate-x-1 hover:-translate-y-1">
       <div className="relative">
         <div className='w-full aspect-[16/8] lg:aspect-[16/10]'>
           <Image className="object-cover" src={image} fill alt={id} />

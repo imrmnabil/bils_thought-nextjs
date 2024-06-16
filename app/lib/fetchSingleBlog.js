@@ -42,7 +42,7 @@ export default async function fetchSingleBlog(id) {
         minute: minute
     },
     duration: blog.duration,
-    content: blog.content
+    mdpath: blog.markdown
   };
   return post;
 }
