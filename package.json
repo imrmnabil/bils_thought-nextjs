@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postinstall": "prisma generate"
   },
   "dependencies": {
     "@emotion/react": "^11.11.4",
@@ -20,6 +21,7 @@
     "@next/mdx": "^14.2.4",
     "@prisma/client": "^5.15.0",
     "@types/mdx": "^2.0.13",
+    "express": "^4.19.2",
     "gray-matter": "^4.0.3",
     "next": "14.2.3",
     "next-mdx-remote": "^5.0.0",
@@ -29,6 +31,7 @@
     "rehype-highlight": "^7.0.0",
     "remark-frontmatter": "^5.0.0",
     "remark-gfm": "^4.0.0",
+    "sqlite3": "^5.1.7",
     "swiper": "^11.1.4",
     "swr": "^2.2.5",
     "unfetch": "^5.0.0"
